@@ -1,10 +1,63 @@
 package rowards;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class metodos {
 	static Scanner sc = new Scanner(System.in);
+	
+	/**
+	 * crea los magos leidos por el archivo personajes.txt
+	 * @param magos
+	 * @param ordenes
+	 */
+	public static void leerPersonajes(ArrayList<Mago> magos, ArrayList <Orden> ordenes) {
+		File leer = new File("personajes.txt");
+		Scanner s = null;
+		int cont = 0;
+		
+		try {
+			// Leemos el contenido del fichero
+			System.out.println("**Cargando Magos**");
+			s = new Scanner(leer);
+			String nombre="";
+			String orden="";
+			int vida=0, afinidad=0, resistencia=0;
+
+			// Leemos linea a linea el fichero
+			while (s.hasNextLine()) {
+				cont++;
+				if(cont%5 == 1) {
+					nombre = s.next();
+				}else if (cont%5 == 2) {
+					vida = s.nextInt();
+				}
+				else if (cont%5 == 3) {
+					afinidad = s.nextInt();
+				}
+				else if (cont%5 == 4) {
+					resistencia = s.nextInt();
+				}
+				else if (cont%5 == 0) {
+					orden = s.next();
+					magos.add(new Mago(nombre, vida, afinidad, resistencia, buscarOrden(orden, ordenes) ));
+				}
+				
+			}
+
+		} catch (Exception ex) {
+			System.out.println("Mensaje: " + ex.getMessage());
+		} finally {
+			// Cerramos el fichero tanto si la lectura ha sido correcta o no
+			try {
+				if (s != null)
+					s.close();
+			} catch (Exception ex2) {
+				System.out.println("Mensaje 2: " + ex2.getMessage());
+			}
+		}
+	}
 	
 	/**
 	 * muestra la informacion de un mago
@@ -49,6 +102,25 @@ public class metodos {
 			}
 		}
 		return -1;
+	}
+	
+	/**
+	 * buscar una orden por el nombre
+	 * @param nombre
+	 * @param ordenes
+	 * @return orden
+	 */
+	public static Orden buscarOrden(String nombre, ArrayList <Orden> ordenes) {
+		Orden orden = null;
+		boolean boo=false;
+		for(int i=0;i<ordenes.size();i++) {
+			if(ordenes.get(i).nombre.toLowerCase().equals(nombre.toLowerCase())== true) {
+				orden = ordenes.get(i);
+				boo=true;
+			}
+		}
+		if(boo == false)System.out.println("Error al buscar la Orden");
+		return orden;
 	}
 	
 	/**

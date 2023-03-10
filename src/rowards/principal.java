@@ -1,13 +1,15 @@
  package rowards;
-
+ 
 import java.util.ArrayList;
 
 public class principal {
 	
 	public static void main(String[] args) {
-		
+				
 		ArrayList <Hechizo> hechizos = new ArrayList <Hechizo>();
 		ArrayList <Mago> magos = new ArrayList <Mago>();
+		ArrayList <Orden> ordenes = new ArrayList <Orden>();
+		
 		
 		hechizos.add(new Hechizo("Sablazo en la factura", "Ataca al mago rival", 1, 1, "Ofensivo"));
 		hechizos.add(new Hechizo("La ultima y pa casa", "Ataca al mago rival", 1, 1, "Ofensivo"));
@@ -23,11 +25,12 @@ public class principal {
 		Orden meeplepuf = new Orden("Meeplepuf",hechizos.get(1));
 		Orden tokenclau = new Orden("Tokenclau",hechizos.get(2));
 		Orden sleeverin = new Orden("Sleeverin",hechizos.get(3));
+		ordenes.add(dicendorf);
+		ordenes.add(meeplepuf);
+		ordenes.add(tokenclau);
+		ordenes.add(sleeverin);
 		
-		magos.add(new Mago("Ron", 1000, 100, 100, dicendorf));
-		magos.add(new Mago("Kim", 1000, 100, 100, meeplepuf));
-		magos.add(new Mago("Peter", 1000, 100, 100, tokenclau));
-		magos.add(new Mago("Drake", 1000, 100, 100, sleeverin));
+		metodos.leerPersonajes(magos, ordenes);
 		
 		metodos.añadirHechizosBasicos(magos.get(0), hechizos, dicendorf);
 		metodos.añadirHechizosBasicos(magos.get(1), hechizos, meeplepuf);
@@ -35,6 +38,6 @@ public class principal {
 		metodos.añadirHechizosBasicos(magos.get(3), hechizos, sleeverin);
 		
 		
+		
 	}
-
 }
