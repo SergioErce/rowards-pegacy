@@ -45,8 +45,6 @@ public class principal {
 		
 		metodos.menu(hechizos, magos, ordenes);
 		
-		//guardar los magos en RowardsPegacy.bkp antes de salir
-		metodos.guardarPersonajes(magos);
 		System.out.println("**Salida//FIN**");
 	}
 }

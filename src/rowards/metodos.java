@@ -238,13 +238,14 @@ public class metodos {
 			if (validarMago(magos, nombre) == true)System.out.println("Este mago ya existe");
 		}while(validarMago(magos, nombre) == true);
 		
+		/*
 		System.out.println("Vida:");
 		vida = sc.nextInt();
 		System.out.println("Afinidad:");
 		afinidad = sc.nextInt();
 		System.out.println("Resistencia:");
 		resistencia = sc.nextInt();
-		
+		*/
 		do {
 			System.out.println("Orden:");
 			nombreorden = sc.next();
@@ -253,7 +254,7 @@ public class metodos {
 				System.out.println("Error al introducir la Orden ");
 			}
 		}while(orden == null);
-		magos.add(new Mago(nombre, vida, afinidad, resistencia, orden));
+		magos.add(new Mago(nombre, 1000, 100, 100, orden));
 		añadirHechizosBasicos(magos.get(magos.size()-1), hechizos, orden);
 		guardarPersonajes(magos);
 	}
@@ -271,6 +272,7 @@ public class metodos {
 		}while(n<0);
 		magos.remove(n);
 		System.out.println("Mago eliminado");
+		guardarPersonajes(magos);
 	}
 	
 	//gestion orden
@@ -472,7 +474,7 @@ public class metodos {
 	 */
 	public static void eliminarHechizo(Mago mago) {
 		mostrarLibro(mago);
-		System.out.println("Para modificar un hechizo:");
+		System.out.println("Para eliminar un hechizo:");
 		int num = buscarHechizo(mago.libro.hechizos);
 		if(num == 0)System.out.println("No se puede eliminar un hechizo de Orden");
 		else {
