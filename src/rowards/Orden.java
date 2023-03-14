@@ -20,38 +20,38 @@ public class Orden {
 		switch (nombre) {
 		case "Dicendorf":
 			this.caracteristica1 = "Predisposicion";
-			this.atributo1 = 1;
+			this.atributo1 = 50;
 			this.caracteristica2 = "Inconsiencia";
-			this.atributo2 = 1;
+			this.atributo2 = 10;
 			this.caracteristica3 = "Protagonismo";
-			this.atributo3 = 1;
+			this.atributo3 = 30;
 			this.hechizo = hechizo;
 			break;
 		case "Meeplepuf":
 			this.caracteristica1 = "Eficiencia";
-			this.atributo1 = 1;
+			this.atributo1 = 50;
 			this.caracteristica2 = "Honor";
-			this.atributo2 = 1;
+			this.atributo2 = 20;
 			this.caracteristica3 = "Empty";
 			this.atributo3 = 0;
 			this.hechizo = hechizo;
 			break;
 		case "Tokenclau":
 			this.caracteristica1 = "Arrojo";
-			this.atributo1 = 1;
+			this.atributo1 = 30;
 			this.caracteristica2 = "Carisma";
-			this.atributo2 = 1;
+			this.atributo2 = 30;
 			this.caracteristica3 = "Empty";
 			this.atributo3 = 0;
 			this.hechizo = hechizo;
 			break;
 		case "Sleeverin":
 			this.caracteristica1 = "Sigilo";
-			this.atributo1 = 1;
+			this.atributo1 = 50;
 			this.caracteristica2 = "Venenoso";
-			this.atributo2 = 1;
+			this.atributo2 = 30;
 			this.caracteristica3="Hablar con animales";
-			this.atributo3 = 1;
+			this.atributo3 = 20;
 			this.hechizo = hechizo;
 			break;
 		}

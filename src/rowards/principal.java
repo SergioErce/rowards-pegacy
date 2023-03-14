@@ -12,15 +12,15 @@ public class principal {
 		
 		
 		//crear hechizos
-		hechizos.add(new Hechizo("Sablazo en la factura", "Ataca al mago rival", 1, 1, 2, 2, "Ofensivo"));
-		hechizos.add(new Hechizo("La ultima y pa casa", "Ataca al mago rival", 1, 1, 2, 2, "Ofensivo"));
-		hechizos.add(new Hechizo("Por los pelos", "Ataca al mago rival", 0, 1, 2, 2, "Ofensivo"));
-		hechizos.add(new Hechizo("No sin mis oros", "Ataca al mago rival", 0, 1, 2, 2, "Ofensivo"));
-		hechizos.add(new Hechizo("restaurarSalud", "Restaura vida al mago", 1, 0, "Sanacion"));
-		hechizos.add(new Hechizo("restaurarAfinidad", "Restaura afinidad al mago", 1, 0, "Sanacion"));
-		hechizos.add(new Hechizo("ataqueMagico", "Ataca al mago rival", 0, 1, "Ofensivo"));
-		hechizos.add(new Hechizo("confundirMago", "Confunde al mago rival", 0, 1, "Confusion"));
-		hechizos.add(new Hechizo("defensaMagica", "Defensa contra hechizos", 1, 0, "Defensivo"));
+		hechizos.add(new Hechizo("Sablazo en la factura", "Ataca al mago rival", 0, 250, 2, 2, "Ofensivo"));
+		hechizos.add(new Hechizo("La ultima y pa casa", "Ataca al mago rival", 0, 250, 2, 2, "Ofensivo"));
+		hechizos.add(new Hechizo("Por los pelos", "Ataca al mago rival", 0, 250, 2, 2, "Ofensivo"));
+		hechizos.add(new Hechizo("No sin mis oros", "Ataca al mago rival", 0, 250, 2, 2, "Ofensivo"));
+		hechizos.add(new Hechizo("restaurarSalud", "Restaura vida al mago", 150, 0, "Sanacion"));
+		hechizos.add(new Hechizo("restaurarAfinidad", "Restaura afinidad al mago", 150, 0, "Sanacion"));
+		hechizos.add(new Hechizo("ataqueMagico", "Ataca al mago rival", 0, 150, "Ofensivo"));
+		hechizos.add(new Hechizo("confundirMago", "Confunde al mago rival", 0, 150, "Confusion"));
+		hechizos.add(new Hechizo("defensaMagica", "Defensa contra hechizos", 150, 0, "Defensivo"));
 		
 		//crear ordenes
 		Orden dicendorf = new Orden("Dicendorf",hechizos.get(0));
